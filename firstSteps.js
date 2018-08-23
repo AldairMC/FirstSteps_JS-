@@ -28,3 +28,13 @@
   var articulos = new Array("hola", "bienvenido");
 
   //dos manera de hacer un Array
+
+  document.write("<p> Para agregar elementos al inicio utilizamos </p>");
+  articulos.unshift("hey"); //agregar elementos al inicio del array
+
+  document.write("<p> Para agregar elementos al final utilizamos </p>");
+  articulos.push("aquí"); //agregaelementos al final del arrat
+
+  document.write(articulos[1]); //muestra el primer elemento del array
+
+  document.write("<p>" + articulos[articulos.length - 1] + "</p>"); // muestra el ultimo elemento del array
