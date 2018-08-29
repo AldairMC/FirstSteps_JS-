@@ -22,7 +22,7 @@ var suma = (notaUno+notaDos+notaTres)/3
 
 if (suma >= 3.0){
   alert("Felicidades");
-}else if (suma == 2.0){
+}else if (suma >= 2.0 && suma <= 2.9){
   alert("debes esforzarte");
 }
   alert("Lo siento");
