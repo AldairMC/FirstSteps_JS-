@@ -4,17 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title> Events </title>
     <script>  
-    
+        function clic(){
+            alert("Hola que hace!");
+        }
+
+        function clic2(){
+            alert("hey wey")
+        }
+
+        document.getElementById("btnCuatro").addEventListener("click",clic);
+
+
     
 
     </script>
 </head>
 <body>
     <div id="divUno" >
-        <button id="btnUno"> Click </button>
+        <button id="btnUno" onclick="clic()"> Click </button>
+        <!-- onclick es un evento que se activa la funcion, solo cuando damos clic en el boton -->
+        
+        <button id="btnDos" onmouseover="clic()"> Click 2 </button>
+        <!-- onmouseover es otro evento que se activa la funcion cuando el puntero pasa por el elemento-->
+        
+        <!-- <button id="btnTres" onmouseout="clic2()"> Click 3</button> -->
+        <!-- onmouseout se activa solo cuando no se coloca el puntero sobre el elemento-->
     </div>
+
+    <div id="dviDos">
+
+        <button id="btnCuatro">Click 4</button>
+    </div>
+
+
 
 
 </body>
