@@ -7,6 +7,7 @@ switch (typecard) {
 
     case "Debit card":
         console.log("Tienes una tarjeta de debito");
+        break;
         
     default:
     console.log("No tienes una tarjeta");
