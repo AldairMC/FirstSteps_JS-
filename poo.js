@@ -36,7 +36,7 @@ var contador;
 
 for (var i = 0;i <= arregloUno.length;i++){
   if (arregloUno[i] % 2 == 0) {
-    contador+=;
+    contador += arregloUno[i];
   }
 }
 document.write("<p>"+contador+"</p>");
