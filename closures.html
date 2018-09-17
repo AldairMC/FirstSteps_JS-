@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Closures </title>
+</head>
+<body>
+
+    <button id="btn"> Click </button>
+
+    <script>
+    
+    //Nota: recomendado siempre declarar variables dentro de una funcion 
+    //closures son funciones que que se daclaran dentro de otras funciones, como el codigo siguiente
+
+    (function(){
+        document.getElementById("btn").addEventListener("click", function(){
+        console.log("Hizo click en mi");            
+    });
+
+    setTimeout(function(){
+        console.log("Hola mundo");
+    },3000);
+    //Un colback es una funcion que se ejecuta cuando se la pasan como argumento a otra
+    })();
+
+    setTimeout(function(){
+        console.log(holaM("Aldair"));
+    }, 6000);
+
+    //Ejemplo de closure
+    function holaM(name){ //Funcion "Padre"
+        function cont(){
+            name = "Jonh"; //Si se modifica dentro del hijo se cambia es todo el padre y donde se este llamando  
+            return "Hola "+name;    
+        }
+        // return cont();
+        cont(); //llamamos la funcion
+        console.log(name);
+    }
+    
+
+    </script>
+</body>
+</html>
