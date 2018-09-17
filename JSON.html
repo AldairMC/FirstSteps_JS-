@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> JSON </title>
+</head>
+<body>
+    
+
+    <script>
+        //JSON => JavaScript Object Notation 
+
+        var json = {
+            nombre: "Aldair",  //clave: valor  // la clave puede o no estar con comillas 
+            apellido: "Morneo",
+            edad: 22,
+           
+            introduccion: function(){ //Podemos pasar funciones como valor
+                console.log("Hola yo soy "+ this.nombre + this.apellido + "y tengo "+ this.edad + "años" );
+            }
+            //con This podemos acceder a los demas atributos y metodos de un JSON
+        }
+
+        console.log(json.introduccion());
+        // console.log(json.nombre); //Esta es la mas comoda
+        // console.log(json["nombre"]);
+    </script>
+</body>
+</html>
