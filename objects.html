@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Obejects </title>
+</head>
+<body>
+
+    <script>
+        function tutor(name, lastName) { //objeto
+            //todo los metodos y atributos deben empezar con this
+            this.name = name;
+
+            this.saludar = function(){
+                console.log("Hola a todos soy "+this.name);
+            }
+            if (typeof lastName !== "undefined") {
+                this.nameComplete = name +" "+ lastName    
+            }
+
+        }
+        var na = new tutor("Aldair", "Moreno");
+
+        na.saludar();
+
+        console.log(na.nameComplete); 
+
+    </script>
+</body>
+</html>
