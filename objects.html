@@ -21,11 +21,24 @@
             }
 
         }
-        var na = new tutor("Aldair", "Moreno");
-
+        //prototype agrega atributos despues de haberlo instanciado 
+        tutor.prototype.edad = 15;
+        
+        var na = new tutor("Aldair", "Moreno"); //Instanciando el objeto
+        var ma = new tutor("Riadla", "Onerom");
         na.saludar();
 
+        tutor.prototype.goodBye = function(){
+            console.log("Adios");
+        }
+
+        ma.goodBye();
+
         console.log(na.nameComplete); 
+        console.log(na.edad);
+
+        //prototype hace referencia a de que prototipo se creo el objeto 
+        //saludas es prototype de tutor y este a su vez es prototipo de object 
 
     </script>
 </body>
