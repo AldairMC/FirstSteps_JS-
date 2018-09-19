@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Getter and Setter</title>
+</head>
+<body>
+
+    
+
+    <script>
+    var json = {
+            nombre_value: "Aldair",  //clave: valor  // la clave puede o no estar con comillas 
+            apellido: "Morneo",
+            edad: 22,
+           
+            introduccion: function(){ //Podemos pasar funciones como valor
+                console.log("Hola yo soy "+ this.nombre + this.apellido + "y tengo "+ this.edad + "años" );
+            },
+            //con This podemos acceder a los demas atributos y metodos de un JSON
+
+            get nombre(){ //set es para traer los datos
+                return this.nombre_value;
+            },
+
+            set nombre(nombre){ //set es para modifiicar los datos
+                this.nombre_value = nombre;
+            }
+
+        }
+
+
+        json.nombre="Riadla";
+        console.log(json.nombre);
+    </script>
+</body>
+</html>
